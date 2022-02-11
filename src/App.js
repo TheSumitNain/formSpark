@@ -1,11 +1,11 @@
 import React from 'react';
-import Todo from './component/Todo';
+import Gallery from './component/Gallery';
 
 
 const App = () => {
   return (
     <>
-      <Todo />
+      <Gallery />
     </>
   )
 };

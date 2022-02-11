@@ -4,100 +4,163 @@
   box-sizing: border-box;
 }
 
-body {
+.heading {
+  padding: 20px 0 10px 0; 
+  display: flex;
+  justify-content: center;
+  background-color: #1c8586;
+  color: white;
+}
+
+.hr {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  background-color: rgb(22, 22, 58);
+  height: .5px;
+  background-color: #1c8586;
+  box-shadow: 0px 1px 8px 1px rgb(221, 216, 216);
 }
 
-.child_div{
+.btn_list {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-
-.child_div figure {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.child_div figure figcaption {
-  color: rgb(98, 112, 124);
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-
-.child_div img{
-  height: 70px;
-  width: 60px;
-  margin-bottom: 10px;
-}
-
-.addItems {
-  display: flex;
   justify-content: space-around;
-  border: 1px solid black;
-  border-radius: 30px;
-  align-items: center;
-  background-color: white;
-  width: 300px;
-  height: 40px;
-  font-size: 30px;
-  font-weight: 100;
-  margin-bottom: 10px;
+  margin: 20px 30%;
 }
 
-.addItems input {
+.buttons {
+  color: rgb(230, 233, 236);
+  background-color: #1c8586;
   outline: none;
   border: none;
-  padding: 5px;
-  font-size: large;
-  caret-color: red;
-}
-
-.addItems i {
-  color: black;
-}
-
-.addItems i:hover {
-  color: blue;
-}
-
-.eachItem {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid black;
- border-radius: 30px;
-  align-items: center;
-  background-color: white;
-  width: 300px;
-  height: 40px;
-  font-size: 30px;
-  font-weight: 100;
-  padding: 0 10px;
-  margin-bottom: 10px;
-}
-
-.eachItem:hover {
-  background-color: blue;
-  color: aliceblue;
-}
-
-.eachItem h3{
-  font-size: 22px;
-}
-
-.eachItem i:hover {
-  color: red;
-}
-
-.remove button {
-  padding: 5px 10px;
   border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.buttons:hover {
+  color: aliceblue;
+  background-color: #15b7b9;
+}
+
+.order {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 20%;
+}
+
+.order h3 {
+  font-size: 10px;
+  color: #15b7b9;
+}
+
+.order button {
+font-size: 8px;
+background-color: #1c8586;
+color: aliceblue;
+padding: 3px;
+outline: none;
+border: none;
+border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 35px;
+  grid-column-gap: 30px;
+  margin: 40px 50px 10px 50px;
+}
+
+.card{
+  height: 120px;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(2, 2, 2, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  overflow: hidden;
+}
+
+.logo {
+  width: 30%;
+  height: 100%;
+  /* background-color: rgb(233, 228, 201); */
+  float: left;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.describtion {
+  width: 70%;
+  height: 100%;
+  /* background-color: rgb(214, 226, 195); */
+  float: right;
+  padding: 10px 10px 0 10px;
+}
+
+
+.describtion h4 {
+  font-size: 18px;
+  color: #1c8586;
+}
+
+.describtion p {
+  font-size: 8px;
+  font-weight: 100;
+  word-spacing: 1px;
+  padding-top: 3px;
+  color: #4ee6e9;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+    margin: 40px 50px 10px 50px;
+  }
+
+  .heading {
+    padding: 15px 0 10px 0; 
+    font-size: 10px;
+  }
+
+  .btn_list {
+    margin: 20px 5%;
+  }
+  
+  .buttons {
+    padding: 5px 5px;
+  }
+
+  .describtion h4 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width:900px) and (min-width:480px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 35px;
+    grid-column-gap: 30px;
+    margin: 40px 25px 20px 25px;
+  }
+
+  .heading {
+    padding: 15px 0 10px 0; 
+    font-size: 12px;
+  }
+
+  .btn_list {
+    margin: 20px 5%;
+  }
+  
+  .buttons {
+    padding: 5px 10px;
+  }
+
+  .describtion h4 {
+    font-size: 14px;
+  }
 }
