@@ -4,163 +4,108 @@
   box-sizing: border-box;
 }
 
-.heading {
-  padding: 20px 0 10px 0; 
-  display: flex;
-  justify-content: center;
-  background-color: #1c8586;
-  color: white;
+html {
+  font-size: 62.5%;
 }
 
-.hr {
+a {
+  text-decoration: none;
+  color: #0f9fb4;
+}
+
+li {
+  list-style: none;
+}
+
+.main-div{
   width: 100%;
-  height: .5px;
-  background-color: #1c8586;
-  box-shadow: 0px 1px 8px 1px rgb(221, 216, 216);
-}
-
-.btn_list {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin: 20px 30%;
-}
-
-.buttons {
-  color: rgb(230, 233, 236);
-  background-color: #1c8586;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-}
-
-.buttons:hover {
-  color: aliceblue;
-  background-color: #15b7b9;
-}
-
-.order {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-top: 20%;
-}
-
-.order h3 {
-  font-size: 10px;
-  color: #15b7b9;
-}
-
-.order button {
-font-size: 8px;
-background-color: #1c8586;
-color: aliceblue;
-padding: 3px;
-outline: none;
-border: none;
-border-radius: 2px;
-}
-
-.cards {
+  height: 10rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 35px;
-  grid-column-gap: 30px;
-  margin: 40px 50px 10px 50px;
+  grid-template-columns: 10rem 3fr 1fr 10rem;
+  background-color: #0f9fb4;
 }
 
-.card{
-  height: 120px;
-  position: relative;
-  border-radius: 7px;
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(2, 2, 2, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  overflow: hidden;
+.menu-link {
+  grid-column: 3/4;
 }
 
-.logo {
-  width: 30%;
-  height: 100%;
-  /* background-color: rgb(233, 228, 201); */
-  float: left;
+.menu-link ul {
+  height: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.logo img {
-  width: 100%;
-  height: 100%;
+.social-media {
+  grid-column: 4/5;
+}
+ 
+.menu-link ul li {
+  font-size: 1.8rem;
 }
 
-.describtion {
-  width: 70%;
-  height: 100%;
-  /* background-color: rgb(214, 226, 195); */
-  float: right;
-  padding: 10px 10px 0 10px;
+.social-media .hamburger-menu {
+  display: none;
 }
 
+@media (max-width: 998px) {
+  .main-div {
+    height: 7rem;
+    grid-template-columns: 2rem 2fr 3fr 2fr 2rem;
+  }
 
-.describtion h4 {
-  font-size: 18px;
-  color: #1c8586;
+  .menu-link {
+    display: none;
+  }
+
+  .mobile-menu-link {
+    grid-column: 2/4;
+    position: relative;
+    z-index: 99;
+  }
+
+  .mobile-menu-link {
+    background-color: #f0f0f0;
+    height: 20rem;
+    display: grid;
+    grid-column: 2/5;
+    align-items: center;
+    padding-left: 3rem;
+    transition: all 2s linear;
+    transform-origin: top;
+  }
+
+  .mobile-menu-link ul {
+    height: 20rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile-menu-link ul li:first-child {
+    transition-delay: 0.2s;
+  }
+
+  .social-media {
+    grid-row: 1/2;
+    grid-column: 3/5;
+    transition: all 2s linear;
+  }
+
+  .social-media {
+    height: 7rem;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+
+  .social-media .hamburger-menu {
+    display: block;
+    font-size: 4.5rem;
+  }
 }
 
-.describtion p {
-  font-size: 8px;
-  font-weight: 100;
-  word-spacing: 1px;
-  padding-top: 3px;
-  color: #4ee6e9;
-}
-
-
-@media only screen and (max-width: 480px) {
-  .cards {
-    grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 35px;
-    grid-column-gap: 30px;
-    margin: 40px 50px 10px 50px;
-  }
-
-  .heading {
-    padding: 15px 0 10px 0; 
-    font-size: 10px;
-  }
-
-  .btn_list {
-    margin: 20px 5%;
-  }
-  
-  .buttons {
-    padding: 5px 5px;
-  }
-
-  .describtion h4 {
-    font-size: 12px;
-  }
-}
-
-@media (max-width:900px) and (min-width:480px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 35px;
-    grid-column-gap: 30px;
-    margin: 40px 25px 20px 25px;
-  }
-
-  .heading {
-    padding: 15px 0 10px 0; 
-    font-size: 12px;
-  }
-
-  .btn_list {
-    margin: 20px 5%;
-  }
-  
-  .buttons {
-    padding: 5px 10px;
-  }
-
-  .describtion h4 {
-    font-size: 14px;
-  }
+.hamburger {
+  color: #f0f0f0;
 }

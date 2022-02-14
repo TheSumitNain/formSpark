@@ -1,13 +1,12 @@
 import React from 'react';
-import Gallery from './component/Gallery';
-
+import Navbar from './Navbar';
 
 const App = () => {
-  return (
-    <>
-      <Gallery />
-    </>
-  )
+    return (
+        <>
+           <Navbar />
+        </>
+    )
 };
 
 export default App;
