@@ -10,7 +10,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #0f9fb4;
+  color: #f0f0f0;
 }
 
 li {
@@ -22,7 +22,7 @@ li {
   height: 10rem;
   display: grid;
   grid-template-columns: 10rem 3fr 1fr 10rem;
-  background-color: #0f9fb4;
+  background-color: #152737;
 }
 
 .menu-link {
@@ -48,6 +48,22 @@ li {
   display: none;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 25rem;
+}
+
+section p {
+  font-size: 2.5rem;
+}
+
+section h1 {
+  font-size: 3.5rem;
+}
+
 @media (max-width: 998px) {
   .main-div {
     height: 7rem;
@@ -59,7 +75,6 @@ li {
   }
 
   .mobile-menu-link {
-    grid-column: 2/4;
     position: relative;
     z-index: 99;
   }
@@ -103,6 +118,11 @@ li {
   .social-media .hamburger-menu {
     display: block;
     font-size: 4.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #152737;
   }
 }
 

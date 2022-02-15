@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
+import {NavLink} from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
@@ -9,10 +9,10 @@ const Navbar = () => {
             <nav className="main-div">
                 <div className={showMedia ? "menu-link mobile-menu-link" : "menu-link"}>
                     <ul>
-                        <li> <a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li> <NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/about">About</NavLink></li>
+                        <li><NavLink to="/service">Services</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
                 <div className="social-media">
