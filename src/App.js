@@ -1,10 +1,11 @@
 import React from 'react'
-import Temp from "./Temp";
+import Temperature from "./Temperature";
+
 
 const App = () => {
   return (
     <>
-    <Temp />
+    <Temperature />
     </>
   )
 }
